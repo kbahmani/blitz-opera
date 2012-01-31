@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" id="http://blitz.io/">
+	<name>Blitz</name>
+	<description>Instantly load test your app from around the world with just a few clicks. No scripting and no test creation.</description>
+  	<author href="http://blitz.io/" email="kbahmani@mudynamics.com">Blitz</author>
+  	<icon src="icon.png"/>
+</widget>

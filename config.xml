@@ -4,6 +4,6 @@
 	<description>Instantly load test your app from around the world with just a few clicks. No scripting and no test creation.</description>
   	<author href="http://blitz.io/" email="kbahmani@mudynamics.com">Blitz</author>
 	<feature name="opera:share-cookies" required="true"/>
-	<access origin="*" subdomains="true"/>
+	<access origin="http://blitz.io/" subdomains="true"/>
   	<icon src="icon.png"/>
 </widget>

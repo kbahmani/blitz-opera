@@ -3,8 +3,8 @@
     regexp: true, plusplus: true, bitwise: false, browser: true, indent: 4 */
 /*global $, Math, localStorage, opera */
 var blitz = (function () {
-    var root = 'http://blitz.io/';
-	// var root = 'http://localhost:5000/';
+    // var root = 'http://blitz.io/';
+	var root = 'http://localhost:5000/';
     return {
         root: function () {
             return root;
@@ -112,7 +112,20 @@ $(function() {
 	
 	var _url, _cookies = [];
 	
-	//READ COOKIE AND URL HERE
+	//Because Opera doesn't support access to page Cookies
+	//We have to use the flowing methods
+	//As soon as Opera add this ability to API this code will replace with better code
+	
+	//Strat Workaround 
+	// _url = document.location.href;
+	$url.text(window.localStorage.getItem('_url'));
+	// raw_cookies = document.cookie.split(';');
+	// for(i=0;i<raw_cookies.length;i++){
+	// 	
+	// }
+	
+	
+	//End Workaround
 	
 	function showTab(name) {
         $('.tabs .tab').hide();
@@ -369,7 +382,8 @@ $(function() {
         localStorage.setItem('duration', $(this).val());
     }).val(localStorage.getItem('duration') || '10').change();
 
-    if (localStorage.getItem('api_key2')) {
+	
+	if (localStorage.getItem('api_key2')) {
         showTab('blitz');
     } else {
         blitz.about(function (d) {

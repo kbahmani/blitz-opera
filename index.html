@@ -11,7 +11,10 @@
             href: "popup.html",
             width: 498,
             height: 130
-          }
+          },
+		  onclick: function() {
+		    console.log(window.document.location.href);
+		  }
         }
         theButton = opera.contexts.toolbar.createItem(ToolbarUIItemProperties);
         opera.contexts.toolbar.addItem(theButton);
